@@ -33,7 +33,7 @@ auto fpprint(void* n,void(*fp)(void*n))
 auto main() -> int
 {
 
-char tabint[4] = {1, 2, 3, 4};
+int tabint[4] = {1, 2, 3, 4};
 
 std::string tabstr[4]= {"[0]", "hello","\n" "[1]", "world"};
 
