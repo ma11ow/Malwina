@@ -7,9 +7,12 @@ float stozek(float h, float r, float R)
     return V;
 }
 int main()
+
 {
-    for(;;)
+    int x;
+    for (;;)
     {
+
         float h, R, r;
 
             std::cout<<"wysokosc:\n";
@@ -21,16 +24,25 @@ int main()
             std::cout<<"promien dolnej:\n";
                 std::cin>>R;
 
-            std::cout<<"Pojemnosc stozka scietego wynosi: "<<stozek(h, r, R)<<"\n";
+                 if (h<=0 || r<=0 || R<=0)
+            {
+                std::cout<<"dlugosc nie moze byc 0 lub mniej\n";
+                break;
+            }
+ 
 
-        int n;
-   if (h==0 || r==0 || R==0)
-   {
-       std::cout<<"dlugosc nie moze byc zerowa\n";
-   }
-else{
-    break;
-}
+            std::cout<<"Pojemnosc stozka scietego wynosi: "<<stozek(h, r, R)<<"\n";
+            std::cout<<"jezeli chcesz zakonczyc program wpisz zero, jezeli nie podaj dowolna liczbe \n";
+            std::cin>>x;
+
+            if(x==0)
+            {
+                break;
+            }
+            
     }
+        
+
+   
 return 0;
 }
